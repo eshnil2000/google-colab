@@ -1,9 +1,10 @@
 import unittest
 from unittest import TestCase
-from ... import dutils
+import sys
+sys.path.append('/content/google-colab/')
+
 from dutils.neural_network import NeuralNetwork
-from dutils.dataset import SampleCircleDataset, SampleSwirlDataset,\
-	SampleHalfDividedDataset, SampleAcrossCornerDataset
+from dutils.dataset import DemoDataset
 
 class TestDankuTestCase(TestCase):
 	def setUp(self):
@@ -34,7 +35,7 @@ class TestDanku(TestDankuTestCase):
 		hl_nn = []
 		ol_nn = 2
 		nn = NeuralNetwork(il_nn, hl_nn, ol_nn)
-		scd = SampleHalfDividedDataset()
+		scd = DemoDataset()
 		scd.init_random_training_indexes()
 		scd.danku_init()
 		nn.load_dataset(scd)
@@ -48,7 +49,7 @@ class TestDanku(TestDankuTestCase):
 		hl_nn = []
 		ol_nn = 2
 		nn = NeuralNetwork(il_nn, hl_nn, ol_nn)
-		scd = SampleHalfDividedDataset(training_percentage=0.8)
+		scd = DemoDataset(training_percentage=0.8)
 		scd.init_random_training_indexes()
 		scd.danku_init()
 		nn.load_dataset(scd)
@@ -73,7 +74,7 @@ class TestDanku(TestDankuTestCase):
 		hl_nn = [4]
 		ol_nn = 2
 		nn = NeuralNetwork(il_nn, hl_nn, ol_nn)
-		scd = SampleHalfDividedDataset()
+		scd = DemoDataset()
 		scd.init_random_training_indexes()
 		scd.danku_init()
 		nn.load_dataset(scd)
@@ -87,7 +88,7 @@ class TestDanku(TestDankuTestCase):
 		hl_nn = [4]
 		ol_nn = 2
 		nn = NeuralNetwork(il_nn, hl_nn, ol_nn)
-		scd = SampleHalfDividedDataset(training_percentage=0.8)
+		scd = DemoDataset(training_percentage=0.8)
 		scd.init_random_training_indexes()
 		scd.danku_init()
 		nn.load_dataset(scd)
@@ -112,7 +113,7 @@ class TestDanku(TestDankuTestCase):
 		hl_nn = [4,5,6]
 		ol_nn = 2
 		nn = NeuralNetwork(il_nn, hl_nn, ol_nn)
-		scd = SampleHalfDividedDataset()
+		scd = DemoDataset()
 		scd.init_random_training_indexes()
 		scd.danku_init()
 		nn.load_dataset(scd)
@@ -126,7 +127,7 @@ class TestDanku(TestDankuTestCase):
 		hl_nn = [4,5,6]
 		ol_nn = 2
 		nn = NeuralNetwork(il_nn, hl_nn, ol_nn)
-		scd = SampleHalfDividedDataset(training_percentage=0.8)
+		scd = DemoDataset(training_percentage=0.8)
 		scd.init_random_training_indexes()
 		scd.danku_init()
 		nn.load_dataset(scd)
