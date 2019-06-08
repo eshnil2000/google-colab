@@ -137,7 +137,7 @@ class TextOverlappingHandler():
         else:
             return False
 
-class NeuralNetwork():
+class NeuralNetworkVis():
     def __init__(self, number_of_neurons_in_widest_layer):
         self.number_of_neurons_in_widest_layer = number_of_neurons_in_widest_layer
         self.layers = []
@@ -190,7 +190,7 @@ class DrawNN():
         
     def draw( self ):
         widest_layer = max( self.neural_network )
-        network = NeuralNetwork( widest_layer )
+        network = NeuralNetworkVis( widest_layer )
         for l in self.neural_network:
             network.add_layer(l)
         network.draw(self.weights_list)
