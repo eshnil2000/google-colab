@@ -3,7 +3,6 @@
 # Contributor: Jianzheng Liu
 # Contact: jzliu.100@gmail.com
 # https://raw.githubusercontent.com/jzliu-100/visualize-neural-network/master/VisualizeNN.py
-!pip install palettable
 from matplotlib import pyplot
 from math import cos, sin, atan
 from palettable.tableau import Tableau_10
