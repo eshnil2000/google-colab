@@ -2,8 +2,8 @@ pragma solidity ^0.4.19;
 // Danku contract version 0.0.1
 // Data points are x, y, and z
 
-contract danku {
-  function danku() public {
+contract Danku_demo_final {
+  function Danku_demo_final() public {
     // Neural Network Structure:
     //
     // (required) input layer x number of neurons
