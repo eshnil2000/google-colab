@@ -134,3 +134,4 @@ class DemoDataset(Dataset):
         random.shuffle(self.data)
         self.data = self.data[:data_size]
         self.shuffle()
+        self.dps = 3
