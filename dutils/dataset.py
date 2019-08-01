@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-poll_data=pd.read_csv("data/poll_data.csv")
+poll_data=pd.read_csv("../data/poll_data.csv")
 
 import random
 from secrets import choice, randbelow
