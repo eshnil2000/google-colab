@@ -1,7 +1,7 @@
 {
     "network_defaults":{
         "name": "development",
-        "gas_limit": false,
+        "gas_limit": 6721975000000000000000000000000000,
         "gas_price": false
     },
     "networks": {
