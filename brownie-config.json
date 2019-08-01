@@ -16,7 +16,7 @@
         }
     },
     "test":{
-        "gas_limit": 6721975,
+        "gas_limit": 6721975000000000000000000000000000,
         "default_contract_owner": false,
         "broadcast_reverting_tx": true
     },
