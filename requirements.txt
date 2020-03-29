@@ -1,0 +1,8 @@
+pandas 
+matplotlib 
+numpy
+python-snappy
+eth-brownie==1.0.0b7
+py-solc-x
+web3==4.9.1
+palettable==3.3.0
