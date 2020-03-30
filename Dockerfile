@@ -26,21 +26,14 @@ RUN apt-get -y install libsnappy-dev && \
 
 RUN apt-get -y install python-tk python3-tk tk-dev
 
-#RUN fix-permissions /etc/jupyter/
-
 # Switch back to jovyan to avoid accidental container runs as root
-COPY jupyter_notebook_config.py $HOME/.jupyter/
-RUN chown -R jovyan:jovyan $HOME/.jupyter
-RUN chmod -R 755 $HOME/.jupyter
+
+   
 USER $NB_UID
-RUN fix-permissions /home/$NB_USER
+RUN echo $NB_UID $HOME
 WORKDIR $HOME
 
-#USER $NB_UID
-#WORKDIR $HOME
-
-COPY . .
-
+COPY . . 
 RUN pip install -r requirements.txt
 
 # Bundle app source
