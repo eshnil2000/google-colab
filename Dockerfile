@@ -1,12 +1,6 @@
 #docker build -t dl-blockchain .
 ARG BASE_CONTAINER=jupyter/base-notebook
 FROM $BASE_CONTAINER
-ENV LANG=C.UTF-8 \
-    SHELL=/bin/bash \
-    NB_USER=jovyan \
-    NB_UID=1000 \
-    NB_GID=100 \
-    HOME=/home/jovyan
 
 LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
