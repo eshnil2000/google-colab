@@ -22,8 +22,8 @@ pipeline {
             }
             steps {
                 sh 'echo "notebook started"'
-                sh 'jupyter notebook --allow-root'
-                //sh 'jupyter notebook'
+                //sh 'jupyter notebook --allow-root'
+                sh 'jupyter notebook'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
 
             }
