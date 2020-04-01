@@ -17,7 +17,8 @@ pipeline {
                 docker {
                     
                     image 'eshnil2000/dl-blockchain' 
-                    args ' -v /var/run/docker.sock:/var/run/docker.sock -p 8888 --network nginx-proxy --expose 8888 -e VIRTUAL_HOST='+UU_ID+'.proxy2.chainapp.live -e VIRTUAL_PORT=8888  '
+                    args ' -p 8888 --network nginx-proxy --expose 8888 -e VIRTUAL_HOST='+UU_ID+'.proxy.chainapp.live -e VIRTUAL_PORT=8888  ' 
+                    //args ' -v /var/run/docker.sock:/var/run/docker.sock -p 8888 --network nginx-proxy --expose 8888 -e VIRTUAL_HOST='+UU_ID+'.proxy2.chainapp.live -e VIRTUAL_PORT=8888  '
                 }
             }
             steps {
