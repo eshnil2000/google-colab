@@ -32,7 +32,7 @@ RUN pip install -r requirements.txt
 USER $NB_UID
 WORKDIR /home/$NB_USER
 
-RUN fix-permissions /home/${NB_USER}
+RUN fix-permissions /home/$NB_USER
 COPY . . 
 
 # Bundle app source
