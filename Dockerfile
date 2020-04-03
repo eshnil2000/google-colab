@@ -31,7 +31,7 @@ RUN apt-get -y install python-tk python3-tk tk-dev
 USER $NB_UID
 WORKDIR /home/$NB_USER
 
-RUN fix-permissions /home/${NB_USER}
+RUN fix-permissions /home/$NB_USER
 COPY . . 
 RUN pip install -r requirements.txt
 
