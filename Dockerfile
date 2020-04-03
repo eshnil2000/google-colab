@@ -28,12 +28,13 @@ RUN apt-get -y install python-tk python3-tk tk-dev
 
 # Switch back to jovyan to avoid accidental container runs as root
 
-   
-USER ${NB_UID}
-WORKDIR /home/${NB_USER}
+RUN pip install -r requirements.txt   
+USER $NB_UID
+WORKDIR /home/$NB_USER
 
 RUN fix-permissions /home/${NB_USER}
 COPY . . 
-RUN pip install -r requirements.txt
 
 # Bundle app source
+
+CMD ["start-notebook.sh","--NotebookApp.token='dappsuni'", "--NotebookApp.password='dappsuni'"]
